@@ -1,0 +1,11 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+
+# VSCode
+.vscode/
+
+# Docker files
+./ClientApp/dockerfile
+./dockerfile

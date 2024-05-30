@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientapp-deployment
+  labels:
+    app: clientapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clientapp
+  template:
+    metadata:
+      labels:
+        app: clientapp
+    spec:
+      containers:
+      - name: clientapp
+        image: musakucuk99/clientapp
+        env:
+        - name: TARGET_URL
+          value: "http://sayhelloapi-service:80/"  # Burada uygun servis adını ve portu kullanın

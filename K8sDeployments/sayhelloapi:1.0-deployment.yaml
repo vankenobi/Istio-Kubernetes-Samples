@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sayhelloapi-v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sayhelloapi
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: sayhelloapi
+        version: v1
+    spec:
+      containers:
+      - name: sayhelloapi
+        image: musakucuk99/sayhello:1.0
+        ports:
+        - containerPort: 8000
