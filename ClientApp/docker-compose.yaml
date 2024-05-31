@@ -1,9 +1,0 @@
-version: '3.8'
-
-services:
-  clientapp:
-    image: musakucuk99/clientapp
-    environment:
-      - TARGET_URL=http://localhost/
-    working_dir: /app
-    command: ["python", "main.py"]
